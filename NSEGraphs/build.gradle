@@ -1,0 +1,47 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.0.6'
+	id 'io.spring.dependency-management' version '1.1.0'
+}
+
+group = 'com.nse-graph'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.jsoup:jsoup:1.16.1'
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+ 	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	
+	
+	    // Selenium WebDriver
+//    implementation 'org.seleniumhq.selenium:selenium-java:4.1.0'
+        
+    // ChromeDriver executable
+    //implementation 'io.github.bonigarcia:webdrivermanager:5.3.2'
+    
+        implementation 'io.github.bonigarcia:webdrivermanager:4.4.3'
+    implementation 'org.seleniumhq.selenium:selenium-java:4.5.3'
+    implementation 'org.apache.httpcomponents:httpclient:4.5.13'
+    implementation 'org.apache.httpcomponents:httpcore:4.4.14'
+    
+    
+    
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
