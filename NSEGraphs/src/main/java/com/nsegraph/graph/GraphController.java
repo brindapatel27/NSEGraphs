@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/graphs")
 public class GraphController {
 	
-	@Autowired
-	NSEGraphsSchedular nseGraph;
+    @Autowired
+    NSEGraphsSchedular nseGraph;
 	
     @GetMapping("/hello")
     public ResponseEntity<String> hello() {
