@@ -1,1 +1,1 @@
-# NSEGraphs
+# NSE Graphs
